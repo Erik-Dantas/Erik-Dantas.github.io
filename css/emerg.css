@@ -1,0 +1,49 @@
+
+.color-list{
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+.color{
+	display: flex;
+	flex-direction: column;
+	flex: 1 0 10em;
+	box-shadow: 0 0 30px #424242;
+	overflow: hidden;
+	padding: 1em;
+	color: white;
+	transition: flex-basis 500ms ease-in-out;
+}
+.color:hover{
+	flex-basis: 20em;
+}
+.color:hover . details{
+	opacity: 1;
+}
+.name{
+	font-size: 1.2em;
+	font-weight: 600;
+}
+.details{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	opacity: 0;
+	transition: opacity 500ms ease-in-out;
+}
+.details li{
+	font-size: 1em;
+	line-height: 2em;
+}
+h4{
+	padding-top: 10px
+	margin-bottom: 30px;
+}
+@media (min-width: 600px){
+	.color-list{
+		flex-direction: row;
+	}
+	.color{
+		flex-shrink: 1;
+	}
+}
